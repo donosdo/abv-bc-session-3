@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+
+
+
+
+/*Strip the ul of padding and list styling*/
+ul{
+	list-style-type:none;
+	margin:0;
+	padding: 0;
+	position: absolute;
+}
+
+/* Create a Horizontal list with spacing */
+li {
+	display: inline-block;
+	float: left;
+	margin-right: 1px;
+}
+
+/*Style for menu links*/
+li a {
+	display: block;
+	min-width: 140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; 
+	color: #fff;
+	background: #2f3036;
+	text-decoration: none; 
+}
+
+/*HOVER STATE OF TOP LEVEL LINKS*/
+li:hover a{
+	background: #19c589;
+}
+
+/*STYLE FOR DROPDOWN LINKS*/
+li:hover ul a {
+	background:#f3f3f3;
+	color: #2f3036;
+	height: 40px;
+	line-height: 40px;
+}
+
+/*HIDE DROPDOWN LINKS UNTIL THEY ARE NEEDED*/
+li ul{
+	display: none;
+}
+
+/* Make dropdown links vertical*/
+
+li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent Text Wrapping*/
+li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover{
+	display: block;
+}
+
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration:none;
+	color: #fff;
+	background:#19c589;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+
+}
+
+/*Hide checkbox*/
+input[type=checkbox] {
+	display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu {
+	display: block;
+}
+/*Responsive Styles */
+@media screen and (max-width: 500px){
+	/*Make dropdown links appear inline*/
+	ul{
+		position: static;
+		display: none;
+	}
+/*Create vertical spacing*/
+li{
+	margin-bottom: 1px;
+}
+/*Make all menu links full width*/
+ul li, li a {width: 100%}
+/*Display 'show' menu link*/
+.show-menu {
+	display: block;
+}
+}
+
