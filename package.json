@@ -1,0 +1,18 @@
+{
+  "name": "abv-bc-session-2",
+  "version": "1.0.0",
+  "description": "abv-bc-session two",
+  "main": "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[1;2D\u001b[C\u001b[1;2D\u001b[C\u001b[D\u001b[D\u001bfizzBuzz.js)",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "abv-bc-session - 2"
+  },
+  "author": "okolo sunday",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^2.6.0"
+  }
+}
